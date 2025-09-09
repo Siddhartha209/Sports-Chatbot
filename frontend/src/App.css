@@ -1,0 +1,43 @@
+/* User message bubble */
+.chat-message.user {
+  background-color: var(--user-bubble-bg);
+  color: var(--user-bubble-text);
+  border-bottom-right-radius: 0;
+  max-width: 60%;
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 16px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.chat-message.user:hover {
+  filter: brightness(1.1); /* lighten slightly */
+}
+
+.chat-message.user:active {
+  filter: brightness(0.9); /* darken when clicked */
+}
+
+/* Bot message bubble */
+.chat-message.bot {
+  background-color: var(--bot-bubble-bg);
+  color: var(--bot-bubble-text);
+  border-bottom-left-radius: 0;
+  max-width: 60%;
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 16px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.chat-message.bot:hover {
+  filter: brightness(1.1);
+}
+
+.chat-message.bot:active {
+  filter: brightness(0.9);
+}

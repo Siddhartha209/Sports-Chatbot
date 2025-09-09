@@ -1,0 +1,172 @@
+/* ========================= THEME VARIABLES ========================= */ 
+:root { /* Base colors (light mode default) */ 
+    --body-bg: #ffffff; 
+    --body-text: #222; 
+    --sidebar-bg: #6890e5; 
+    --sidebar-text: #ffffff; 
+    --link-color: #007bff; 
+    --link-hover: #1d4ed8; 
+    --card-bg: #f9f9f9; 
+    --card-text: #222; 
+    --button-bg: #007bff; 
+    --button-text: #ffffff; 
+    --user-bubble-bg: #0056b3; 
+    --user-bubble-text: #ffffff; 
+    --bot-bubble-bg: #28a745; 
+    --bot-bubble-text: #ffffff; 
+} 
+body.dark-mode { 
+    --body-bg: #181818; 
+    --body-text: #f1f1f1; 
+    --sidebar-bg: #1f1f1f; 
+    --sidebar-text: #f1f1f1; 
+    --link-color: #66b2ff; 
+    --link-hover: #333333; 
+    --card-bg: #2a2a2a; 
+    --card-text: #f1f1f1;
+    --button-bg: #333333; 
+    --button-text: #ffffff; 
+    --user-bubble-bg: #1e3a8a; /* darker blue for dark mode */ 
+    --user-bubble-text: #ffffff; 
+    --bot-bubble-bg: #166534; /* darker green for dark mode */ 
+    --bot-bubble-text: #e5e5e5; /* softer off-white text */ 
+} 
+/* ========================= GLOBAL STYLES ========================= */
+body { 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    background-color: var(--body-bg); 
+    color: var(--body-text); 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+} 
+a { 
+    color: var(--link-color); 
+    text-decoration: none; 
+    transition: color 0.2s; 
+} 
+a:hover { 
+    color: var(--link-hover); 
+} 
+button { 
+    background-color: var(--button-bg); 
+    color: var(--button-text); 
+    border: none; 
+    padding: 0.6rem 1.2rem; 
+    border-radius: 6px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+} 
+button:hover { 
+    opacity: 0.85; 
+} 
+.card { 
+    background-color: var(--card-bg); 
+    color: var(--card-text); 
+    border-radius: 12px; 
+    padding: 1rem; 
+    margin: 1rem 0; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+} 
+.home-page { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 1rem; 
+} 
+.logo { 
+    max-width: 40%; /* Almost full width */ 
+    height: auto; 
+} 
+.button-group { 
+    display: flex; 
+    gap: 0.8rem; 
+    margin: 1rem; 
+} 
+.login-btn { 
+    background-color: #007bff; /* Blue */ 
+    color: white; 
+    border: none; 
+    padding: 0.8rem 1.5rem; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 1.1rem; 
+} 
+.signup-btn { 
+    background-color: #28a745; /* Green */ 
+    color: white; 
+    border: none; 
+    padding: 0.8rem 1.5rem; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 1.1rem; 
+} 
+.login-btn:hover { 
+    background-color: #0056b3; 
+} 
+.signup-btn:hover { 
+    background-color: #1e7e34; 
+} 
+.info { 
+    margin-top: 0.5rem; 
+    color: #333; 
+    font-size: 1.1rem; 
+    max-width: 500px; 
+} /* Modal Overlay */ 
+.modal-overlay { 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.6); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000; 
+} /* Modal Box */ 
+.modal { 
+    background-color: var(--card-bg);  /* uses theme variable */
+    color: var(--card-text);           /* text switches automatically */
+    padding: 2rem; 
+    border-radius: 12px; 
+    width: 90%; 
+    max-width: 400px; 
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+    transition: background-color 0.3s ease, color 0.3s ease;
+} 
+.signup-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+} 
+.signup-form label { 
+    color: var(--body-text); 
+}
+
+.signup-form input { 
+    margin-top: 0.3rem; 
+    padding: 0.5rem; 
+    border-radius: 6px; 
+    border: 1px solid var(--body-text); /* optional: make border theme-aware */
+    background-color: var(--card-bg);
+    color: var(--card-text);
+}
+.modal-buttons { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 1rem; 
+} 
+.close-btn { 
+    background: #dc3545; /* Red */ 
+    color: white; 
+    border: none; 
+    padding: 0.5rem 1rem; 
+    border-radius: 6px; 
+    cursor: pointer; 
+} 
+.close-btn:hover { 
+    background: #a71d2a; 
+}
