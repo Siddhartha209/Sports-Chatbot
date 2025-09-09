@@ -1,6 +1,6 @@
 # Sports Hub Chatbot
 
-A modern web application for sports fans, featuring a chatbot, user authentication, and theme switching.
+A modern web application for sports fans, featuring a chatbot, user authentication, and theme switching. Made using React, Python, JavaScript, CSS and MongoDB
 
 ---
 
